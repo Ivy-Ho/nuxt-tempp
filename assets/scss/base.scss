@@ -1,0 +1,36 @@
+@import "base/reset";
+@import "base/typography";
+@import "base/scrollbar";
+
+.section-container {
+  max-width: 900px;
+  margin: 0 auto;
+  @include pad() {
+    padding: 0 22px;
+  }
+}
+
+.pad-hide {
+  display: block;
+  @include pad() {
+    display: none;
+  }
+}
+.pad-show {
+  display: none;
+  @include pad() {
+    display: block;
+  }
+}
+
+.section {
+  &__header {
+    font-size: 30px;
+    font-weight: var(--regular);
+    margin-bottom: 30px;
+    @include pad() {
+      font-size: 21px;
+      margin-bottom: 22px;
+    }
+  }
+}
